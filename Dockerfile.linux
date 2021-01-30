@@ -1,5 +1,5 @@
 # nodelink v10 supports amd64, arm64 and arm32v7 using buildx to compile multiple archs (dependant on archs available for source container)
-FROM mcr.microsoft.com/dotnet/core/runtime:3.1
+FROM mcr.microsoft.com/dotnet/runtime:5.0
 
 ARG TARGETPLATFORM
 ARG TARGETOS 
@@ -12,7 +12,7 @@ LABEL   Platform=$TARGETPLATFORM \
          Architectur=$TARGETARCH \
          Variant=$TARGETVARIANT \
          BuildDate=$BUILDDATE \
-         org.label-schema.description="NodeLink v10 for ISY994i" 
+         org.label-schema.description="NodeLink v11 for ISY994i" 
 
 EXPOSE 8090
 VOLUME NodeLink
